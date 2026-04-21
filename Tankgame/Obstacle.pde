@@ -9,19 +9,19 @@ class Obstacle {
     this.y = y;
     w = 100;
     h = 100;
-    speed = 4;
+    speed = 2;
     health = 100;
+    obst1 = loadImage("obstacle.png");
   }
   void display() {
-    rectMode(CENTER);
-    fill(127);
-    rect(x, y, w, h);
+  imageMode(CENTER);
+  image(obst1,x,y);
   }
 
   void move() {
     x = x + speed;
-    //if(x > width) {
-    // x = 0;
-    //}
+    if(x > width) {
+     x = 0;
+    }
   }
 }
